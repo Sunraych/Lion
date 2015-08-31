@@ -83,6 +83,7 @@ public class MainActivity extends Activity implements OnClickListener {
         title_right_button.setBackgroundResource(R.drawable.title_setting);
         title_right_button.setOnClickListener(this);
         title_textView.setText(R.string.main_activity_title);
+        title_textView.setOnClickListener(this);
     }
 
     private void initView() {
@@ -144,7 +145,7 @@ public class MainActivity extends Activity implements OnClickListener {
                 setting();
                 title_right_button.setBackgroundResource(R.drawable.title_setting);
                 break;
-            case R.id.left_btn:
+            case R.id.title_text:
                 count++;
                 if (count == 5) {
                     customPro();

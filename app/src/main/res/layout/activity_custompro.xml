@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg">
+
+    <include
+        android:id="@+id/title_custompro"
+        layout="@layout/title_bar"></include>
+
+    <EditText
+        android:id="@+id/et_input_pro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_custompro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:ems="10"
+        android:hint="@string/custompro_activity_title"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/btn_start_from_custom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/et_input_pro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="54dp"
+        android:background="@drawable/start_btn_bg"
+        android:text="@string/start" />
+
+</RelativeLayout>
