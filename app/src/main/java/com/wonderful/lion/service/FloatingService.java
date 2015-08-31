@@ -21,7 +21,6 @@ import android.view.View;
 import android.view.View.OnTouchListener;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -76,10 +75,8 @@ public class FloatingService extends Service {
      */
     private Handler h = new Handler() {
         public void handleMessage(android.os.Message msg) {
-
             int i = msg.what;
             int j = i % 3;
-
             if (i > 20)
                 j = 4;
 
@@ -106,8 +103,6 @@ public class FloatingService extends Service {
                     break;
             }
         }
-
-        ;
     };
     private Runnable refreshData = new Runnable() {
         @Override

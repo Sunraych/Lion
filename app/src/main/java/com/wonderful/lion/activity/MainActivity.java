@@ -179,11 +179,9 @@ public class MainActivity extends Activity implements OnClickListener {
                     .setPositiveButton(
                             getResources().getString(R.string.continue_monitor),
                             new DialogInterface.OnClickListener() {
-
                                 @Override
                                 public void onClick(DialogInterface dialog,
                                                     int which) {
-                                    // �����ϴ�
                                     Intent intent = new Intent(
                                             Intent.ACTION_MAIN, null);
                                     intent.addCategory(Intent.CATEGORY_HOME);
@@ -195,27 +193,20 @@ public class MainActivity extends Activity implements OnClickListener {
                             })
                     .setNeutralButton(getResources().getString(R.string.ok),
                             new DialogInterface.OnClickListener() {
-
-                                @SuppressWarnings("deprecation")
                                 @Override
                                 public void onClick(DialogInterface dialog,
                                                     int which) {
-                                    // ��ȷ��
-
                                     finish();
                                     MainActivity.this.onDestroy();
                                     System.exit(0);
-
                                 }
                             })
                     .setNegativeButton(
                             getResources().getString(R.string.cancel),
                             new DialogInterface.OnClickListener() {
-
                                 @Override
                                 public void onClick(DialogInterface dialog,
                                                     int which) {
-                                    // ��ȡ��
                                     return;
                                 }
                             }).create();
