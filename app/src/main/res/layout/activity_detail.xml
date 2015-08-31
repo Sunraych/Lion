@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg"
+    android:orientation="vertical">
+
+    <!-- 标题栏 -->
+    <include
+        android:id="@+id/detail_title"
+        layout="@layout/title_bar"></include>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/detail_title">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/default_bg">
+
+            <!-- 进程信息 -->
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/input_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/battery_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:drawableLeft="@drawable/icon_battery"
+                    android:gravity="center_vertical"
+                    android:text="@string/result"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/cpu_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:drawableLeft="@drawable/icon_cpu"
+                    android:gravity="center_vertical"
+                    android:text="@string/result"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/ram_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:drawableLeft="@drawable/icon_ram"
+                    android:gravity="center_vertical"
+                    android:text="@string/result"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/traffic_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:drawableLeft="@drawable/icon_traffic"
+                    android:gravity="center_vertical"
+                    android:text="@string/result"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- 选项 -->
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/input_bg"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBox_log"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:button="@drawable/log_list_checkbox"
+                    android:text="@string/output_log"
+                    android:textColor="@color/black" />
+
+                <CheckBox
+                    android:id="@+id/checkBox_flow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:button="@drawable/log_list_checkbox"
+                    android:text="@string/open_flow"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/control_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/linearLayout1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/start_btn_bg"
+                android:text="@string/start"
+                android:textSize="17sp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -10,18 +10,18 @@
         android:id="@+id/ll_float"
         android:layout_width="match_parent"
         android:layout_height="19dp"
-
+        android:background="@drawable/assist_flow_bk"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
-        <ImageView
+        <!--<ImageView
             android:id="@+id/iv_search"
             android:layout_width="14dp"
             android:layout_height="14dp"
             android:layout_marginLeft="2dp"
             android:layout_weight="0.5"
             android:contentDescription="@string/app_name"
-            android:paddingRight="2dp" />
+            android:paddingRight="2dp" />-->
 
         <TextView
             android:id="@+id/tv_memory"
@@ -48,6 +48,7 @@
         android:id="@+id/ll_float2"
         android:layout_width="match_parent"
         android:layout_height="19dp"
+        android:background="@drawable/assist_flow_bk"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
