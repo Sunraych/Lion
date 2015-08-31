@@ -130,7 +130,6 @@ public class FloatingService extends Service {
                     RefreshUI();
                 }
                 if (isLog) {
-                    long currentTime = System.currentTimeMillis();
                     LogName = packagename + "_"
                             + logTime + "_" + logNum + ".log";
                     LogFile logFile = new LogFile();
@@ -213,8 +212,8 @@ public class FloatingService extends Service {
 
                 public boolean onTouch(View v, MotionEvent event) {
                     layoutParams.gravity = Gravity.LEFT | Gravity.TOP;
-                    int eventaction = event.getAction();
-                    switch (eventaction) {
+                    int eventAction = event.getAction();
+                    switch (eventAction) {
                         case MotionEvent.ACTION_DOWN:
                             action_down_time = System.currentTimeMillis();
                             temp[0] = event.getX();
