@@ -40,6 +40,7 @@ public class AboutActivity extends Activity implements View.OnClickListener {
         title_left_button.setOnClickListener(this);
         iv_logo = (ImageView) findViewById(R.id.iv_logo);
         iv_logo.setOnClickListener(this);
+        iv_logo.setImageResource(R.mipmap.icon);
     }
 
     private void initView() {
