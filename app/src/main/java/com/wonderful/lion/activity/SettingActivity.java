@@ -23,7 +23,6 @@ import android.widget.Toast;
 import com.wonderful.lion.R;
 import com.wonderful.lion.uitl.ClearCacheUtil;
 import com.wonderful.lion.uitl.ConfigUtil;
-import com.wonderful.lion.uitl.LogFile;
 
 import java.io.File;
 
