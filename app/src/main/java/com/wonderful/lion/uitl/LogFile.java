@@ -30,24 +30,12 @@ public class LogFile {
         this.logName = logName;
     }
 
-    public String getUserId() {
-        return userId;
-    }
-
-    public void setUserId(String userId) {
-        this.userId = userId;
-    }
-
     public String getLogTime() {
         return logTime;
     }
 
     public void setLogTime(String logTime) {
         this.logTime = logTime;
-    }
-
-    public int getIsUpload() {
-        return isUpload;
     }
 
     public void setIsUpload(int isUpload) {

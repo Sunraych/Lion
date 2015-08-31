@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/setting_title_bar"
+        layout="@layout/title_bar"></include>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/setting_title_bar">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/setting_basic_part"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/setting_part_margin"
+                android:layout_marginRight="@dimen/setting_part_margin"
+                android:layout_marginTop="@dimen/setting_part_margin">
+
+                <TextView
+                    android:id="@+id/setting_refresh_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/basic_setting" />
+
+                <LinearLayout
+                    android:id="@+id/basic_setting_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/setting_refresh_tv"
+                    android:background="@drawable/setting_border"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/setting_refresh_time"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:background="@drawable/item_setting"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/setting_refresh_message"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/setting_part_margin"
+                            android:layout_marginTop="@dimen/setting_part_margin"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/setting_refresh_title"
+                                style="@style/setting_font"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/setting_part_margin"
+                                android:text="@string/refresh_time_set" />
+
+                            <TextView
+                                android:id="@+id/setting_refresh_explain"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/setting_part_margin"
+                                android:text="@string/refresh_time_explain"
+                                android:textColor="@color/setting_second_title_color"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/refresh_time_current"
+                            style="@style/setting_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="@dimen/setting_part_margin"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+
+                    <View style="@style/devide_line" />
+
+                    <LinearLayout
+                        android:id="@+id/setting_flow_option"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/item_setting"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/setting_flow_option_text"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/setting_part_margin"
+                            android:layout_marginTop="@dimen/setting_part_margin"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/setting_flow_speed_title"
+                                style="@style/setting_font"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/item_setting"
+                                android:paddingLeft="@dimen/setting_part_margin"
+                                android:text="@string/flow_speed" />
+
+                            <TextView
+                                android:id="@+id/setting_flow_speed_explain"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/setting_part_margin"
+                                android:text="@string/flow_speed_explain"
+                                android:textColor="@color/setting_second_title_color"
+                                android:textSize="13sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/setting_flow_speed_current"
+                            style="@style/setting_font"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="@dimen/setting_part_margin"
+                            android:gravity="center_vertical" />
+                    </LinearLayout>
+
+                    <View style="@style/devide_line" />
+
+                    <TextView
+                        android:id="@+id/setting_clearcache"
+                        style="@style/setting_text"
+                        android:background="@drawable/item_setting"
+                        android:text="@string/clearcache" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_about_rl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/setting_part_margin"
+                android:layout_marginRight="@dimen/setting_part_margin"
+                android:layout_marginTop="@dimen/setting_part_margin">
+
+                <TextView
+                    android:id="@+id/setting_about_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_app" />
+
+                <LinearLayout
+                    android:id="@+id/setting_about_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/setting_about_tv"
+                    android:background="@drawable/setting_border"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/setting_help"
+                        style="@style/setting_text"
+                        android:background="@drawable/item_setting"
+                        android:text="@string/help" />
+
+                    <View style="@style/devide_line" />
+
+                    <TextView
+                        android:id="@+id/setting_about"
+                        style="@style/setting_text"
+                        android:background="@drawable/item_setting"
+                        android:text="@string/about_me" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

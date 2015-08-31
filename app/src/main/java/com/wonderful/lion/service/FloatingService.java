@@ -135,7 +135,6 @@ public class FloatingService extends Service {
                             + logTime + "_" + logNum + ".log";
                     LogFile logFile = new LogFile();
                     logFile.setLogTime(String.valueOf(logTime));
-                    logFile.setUserId(configutil.getUID());
                     logFile.setIsUpload(0);
                     logFile.setLogName(LogName);
                     logFile.setLogAppName(util.getAPPname());

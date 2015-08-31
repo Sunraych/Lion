@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">lion</string>
+    <string name="app_name">Lion</string>
     <string name="main_activity_title">请选择要监测的程序</string>
     <string name="memory_monitor">内存监测</string>
     <string name="cpu_monitor">处理器监测</string>
@@ -23,6 +23,7 @@
     <string name="about_me">关于</string>
     <string name="on_off">开启/关闭悬浮窗</string>
     <string name="setting">设置</string>
+    <string name="action_settings">setting</string>
     <string name="clearcache_message">清除缓存成功</string>
     <string name="clearcache_fail">缓存清除完成，不需要清理</string>
     <string name="wifi">WIFI:</string>
@@ -83,6 +84,7 @@
     <string name="uploading">正在上传</string>
     <string name="no_unupload_log">这里什么都没有发现哦~</string>
 
+    <string name="about_welcome">欢迎使用Lion</string>
     <string name="uploading_log_dialog_message">共%1$d个任务，已成功上传%2$d个</string>
     <string name="log_size">大小:</string>
     <string name="log_modify_time">修改时间:</string>
