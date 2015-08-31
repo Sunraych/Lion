@@ -1,5 +1,25 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="aboutMe_img_width">200.0dip</dimen>
+    <dimen name="title_bar_height">45dp</dimen>
+    <dimen name="title_bar_padding_left">15dp</dimen>
+    <dimen name="title_bar_padding_right">15dp</dimen>
+    <dimen name="login_input_margin">15dp</dimen>
+    <dimen name="listview_item_height">60dp</dimen>
+    <dimen name="listview_item_img_marginLeft">10dp</dimen>
+    <dimen name="listview_item_text_marginTop">3dp</dimen>
+    <dimen name="listview_item_text_marginLeft">13dp</dimen>
+    <dimen name="listview_item_img_thumb_width">42dip</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="setting_part_margin">10dp</dimen>
+    <dimen name="setting_list_hight">45dp</dimen>
+    <dimen name="setting_basic_height">65dp</dimen>
+    <dimen name="setting_margin">2dp</dimen>
+    <dimen name="setting_feedback_margin">6dp</dimen>
+    <dimen name="list_item_default_height">48dp</dimen>
+    <dimen name="refresh_title_devide">5dp</dimen>
+    <dimen name="refresh_title_margin_left">40dp</dimen>
+
 </resources>

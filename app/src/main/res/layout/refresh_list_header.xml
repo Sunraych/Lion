@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/black"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" >
+
+        <ImageView
+            android:id="@+id/refresh_list_header_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/refresh_title_margin_left"
+            android:contentDescription="@string/app_image_helper"
+            android:src="@drawable/refresh_loading"
+            android:visibility="gone" >
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/refresh_list_header_pull_down"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/refresh_title_margin_left"
+            android:contentDescription="@string/app_image_helper"
+            android:src="@drawable/refresh_arrow" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <ImageView
+                android:id="@+id/refresh_list_header_success"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/app_image_helper"
+                android:src="@drawable/header_refresh_success"
+                android:visibility="gone" >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/refresh_list_header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/refresh_list_header_success"
+                android:text="@string/app_list_header_refresh_down"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

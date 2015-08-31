@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settingRefreshTime">
+        <item name="one">1秒</item>
+        <item name="two">2秒</item>
+        <item name="three">3秒</item>
+        <item name="four">4秒</item>
+        <item name="five">5秒</item>
+    </string-array>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="default_bg">#FFFFFF</color>
+    <color name="list_pressed">#e3e3e3</color>
+    <color name="title_bg">#545454</color>
+    <color name="black">#000000</color>
+    <color name="grey">#2B2B2B</color>
+    <color name="text_bg">#636363</color>
+    <color name="bg">#D4D4D4</color>
+    <color name="info_detail">#B2DFEE</color>
+    <color name="setting_color">#3e3a39</color>
+    <color name="setting_pressed">#1C86EE</color>
+    <color name="setting_second_title_color">#A8A8A8</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_grey">#808A87</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+
+</resources>
