@@ -47,8 +47,6 @@ public class FloatingService extends Service {
     private WindowManager windowManager;
     private WindowManager.LayoutParams layoutParams;
     private TextView tv_memory, tv_traffic, tv_cpu, tv_battery;
-    // private String logfolder = "/" + "TestData" + "/";
-    private ImageView iv_search;
     private LinearLayout ll;
     private LogUtil logutil;
     private String LogPath = Environment.getExternalStorageDirectory()
@@ -67,8 +65,6 @@ public class FloatingService extends Service {
     private String packagename;
     private long logTime;
     private int logNum = 0;
-    private long time;
-    private Intent intent;
     private int changeColor_delay = 150;
     private long action_down_time;
     private long action_up_time;
@@ -382,10 +378,7 @@ public class FloatingService extends Service {
         if (TextUtils.isEmpty(packagename)) {
             packagename = configutil.getProcess();
         }
-
         logTime = configutil.getLogTime();
-        time = logTime;
-
         handler.post(refreshData);
         return super.onStartCommand(intent, flags, startId);
 
