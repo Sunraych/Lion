@@ -260,7 +260,7 @@ public class SettingActivity extends Activity implements OnClickListener {
                                     @Override
                                     public void onClick(DialogInterface dialog,
                                                         int which) {
-                                        if (clearCache.clearCache(logpath) != true) {
+                                        if (!clearCache.clearCache(logpath)) {
                                             handler.sendEmptyMessage(CLEARCACHE_FAIL);
                                         } else {
                                             handler.sendEmptyMessage(CLEARCACHE);
