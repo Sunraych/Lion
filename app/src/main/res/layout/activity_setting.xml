@@ -138,6 +138,14 @@
                     <View style="@style/devide_line" />
 
                     <TextView
+                        android:id="@+id/setting_systeminfo"
+                        style="@style/setting_text"
+                        android:background="@drawable/item_setting"
+                        android:text="@string/system_detail" />
+
+                    <View style="@style/devide_line" />
+
+                    <TextView
                         android:id="@+id/setting_clearcache"
                         style="@style/setting_text"
                         android:background="@drawable/item_setting"

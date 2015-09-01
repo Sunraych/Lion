@@ -67,8 +67,6 @@ public class MainActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         initTitle();
         initView();
         initProcessList();

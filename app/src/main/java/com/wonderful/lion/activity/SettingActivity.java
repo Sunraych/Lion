@@ -64,6 +64,7 @@ public class SettingActivity extends Activity implements OnClickListener {
     private ClearCacheUtil clearCache;
     private Dialog clearCacheDialog;
     private String logpath = "/TestData/";
+    private TextView systemInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,6 +117,9 @@ public class SettingActivity extends Activity implements OnClickListener {
         clearcache = (TextView) findViewById(R.id.setting_clearcache);
         clearcache.setOnClickListener(this);
 
+        systemInfo = (TextView) findViewById(R.id.setting_systeminfo);
+        systemInfo.setOnClickListener(this);
+
     }
 
     private void initSetTimes() {
@@ -145,9 +149,18 @@ public class SettingActivity extends Activity implements OnClickListener {
             case R.id.setting_help:
                 help();
                 break;
+            case R.id.setting_systeminfo:
+                systemInfo();
+                break;
             default:
                 break;
         }
+    }
+
+    private void systemInfo() {
+        Intent intent = new Intent();
+        intent.setClass(this, PhoneMsgActivity.class);
+        startActivity(intent);
     }
 
     // 设置刷新时间
