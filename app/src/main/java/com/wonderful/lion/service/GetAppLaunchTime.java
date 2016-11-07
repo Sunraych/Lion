@@ -9,6 +9,7 @@ import com.wonderful.lion.uitl.DebugLog;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * Created by Sun Ruichuan on 2015/8/31.
@@ -29,7 +30,13 @@ public class GetAppLaunchTime {
             return 0;
         }
 
-        if (currentApiLevel == 21) {
+        if (currentApiLevel == 24) {
+            thisTime = startActivityWithFieldsForApi24(intent);
+        }else if (currentApiLevel == 23) {
+            thisTime = startActivityWithFieldsForApi23(intent);
+        }else if (currentApiLevel == 22) {
+            thisTime = startActivityWithFieldsForApi22(intent);
+        }else if (currentApiLevel == 21) {
             thisTime = startActivityWithFieldsForApi21(intent);
         } else if (currentApiLevel == 20) {
             thisTime = startActivityWithFieldsForApi20(intent);
@@ -86,6 +93,27 @@ public class GetAppLaunchTime {
                 break;
             }
         }
+    }
+
+    // 6.0
+    private long startActivityWithFieldsForApi24(Intent intent){
+        Object[] objects = new Object[]{null, null, intent, null, null, null,
+                0, 0, null, null, 0};
+        return startActivityForResult(objects);
+    }
+
+    // 6.0
+    private long startActivityWithFieldsForApi23(Intent intent){
+        Object[] objects = new Object[]{null, null, intent, null, null, null,
+                0, 0, null, null, 0};
+        return startActivityForResult(objects);
+    }
+
+    // 5.1
+    private long startActivityWithFieldsForApi22(Intent intent) {
+        Object[] objects = new Object[]{null, null, intent, null, null, null,
+                0, 0, null, null, 0};
+        return startActivityForResult(objects);
     }
 
     // 5.0
