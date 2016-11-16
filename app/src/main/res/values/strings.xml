@@ -113,4 +113,5 @@
     <string name="flow_speed_monitor_all">监控进程所消耗的总流量</string>
     <string name="custompro_activity_title">请输入要监测程序的包名</string>
     <string name="system_detail">系统信息</string>
+    <string name="excshell">执行shell命令</string>
 </resources>

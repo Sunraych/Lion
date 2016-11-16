@@ -124,12 +124,14 @@ public class MainActivity extends Activity implements OnClickListener {
                 String appname = tempItem.get("appname").toString();
                 String packagename = tempItem.get("packagename").toString();
                 String mainActivity = tempItem.get("mainactivity").toString();
+                String uid = tempItem.get("uid").toString();
 
                 Intent intent = new Intent(MainActivity.this,
                         DetailActivity.class);
                 intent.putExtra("appname", appname);
                 intent.putExtra("packagename", packagename);
                 intent.putExtra("mainactivity", mainActivity);
+                intent.putExtra("uid", uid);
 
                 MainActivity.this.startActivity(intent);
             }
@@ -293,7 +295,7 @@ public class MainActivity extends Activity implements OnClickListener {
             holder.appnameText.setText(allProcess.get(position).get("appname")
                     .toString());
             holder.packageText.setText(allProcess.get(position)
-                    .get("packagename").toString());
+                    .get("packagename").toString()+"  uid:"+allProcess.get(position).get("uid"));
 
             return view;
         }

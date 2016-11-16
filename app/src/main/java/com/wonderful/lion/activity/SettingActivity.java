@@ -65,6 +65,7 @@ public class SettingActivity extends Activity implements OnClickListener {
     private Dialog clearCacheDialog;
     private String logpath = "/TestData/";
     private TextView systemInfo;
+    private TextView excshell;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,6 +121,9 @@ public class SettingActivity extends Activity implements OnClickListener {
         systemInfo = (TextView) findViewById(R.id.setting_systeminfo);
         systemInfo.setOnClickListener(this);
 
+        excshell = (TextView) findViewById(R.id.setting_excshell);
+        excshell.setOnClickListener(this);
+
     }
 
     private void initSetTimes() {
@@ -152,6 +156,9 @@ public class SettingActivity extends Activity implements OnClickListener {
             case R.id.setting_systeminfo:
                 systemInfo();
                 break;
+            case R.id.setting_excshell:
+                enter_Excshell();
+                break;
             default:
                 break;
         }
@@ -162,6 +169,13 @@ public class SettingActivity extends Activity implements OnClickListener {
         intent.setClass(this, PhoneMsgActivity.class);
         startActivity(intent);
     }
+
+    private void enter_Excshell() {
+        Intent intent = new Intent();
+        intent.setClass(this, ExcShellActivity.class);
+        startActivity(intent);
+    }
+
 
     // 设置刷新时间
     private void setRefreshTime() {

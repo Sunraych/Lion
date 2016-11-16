@@ -59,6 +59,7 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.NoTitleBar" />
+        <activity android:name=".activity.ExcShellActivity" />
 
         <service android:name="com.wonderful.lion.service.FloatingService" />
     </application>

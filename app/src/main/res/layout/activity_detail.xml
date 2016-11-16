@@ -113,6 +113,19 @@
                 android:text="@string/start"
                 android:textSize="17sp" />
 
+            <TextView
+                android:id="@+id/tv_debug"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/control_btn"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+
 
         </RelativeLayout>
     </ScrollView>

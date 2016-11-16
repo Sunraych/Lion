@@ -146,6 +146,14 @@
                     <View style="@style/devide_line" />
 
                     <TextView
+                        android:id="@+id/setting_excshell"
+                        style="@style/setting_text"
+                        android:background="@drawable/item_setting"
+                        android:text="@string/excshell" />
+
+                    <View style="@style/devide_line" />
+
+                    <TextView
                         android:id="@+id/setting_clearcache"
                         style="@style/setting_text"
                         android:background="@drawable/item_setting"

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_feedback"
+        layout="@layout/title_bar"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp">
+
+            <Button
+                android:id="@+id/btn_exc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/et_input_sh"
+                android:layout_alignBottom="@+id/et_input_sh"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/shape"
+                android:textColor="@color/white"
+                android:text="action" />
+
+            <TextView
+                android:id="@+id/tv_$"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/btn_exc"
+                android:layout_alignBottom="@+id/btn_exc"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="$" />
+
+            <EditText
+                android:id="@+id/et_input_sh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btn_exc"
+                android:layout_toRightOf="@+id/tv_$"
+                android:layout_toEndOf="@+id/tv_$"
+                android:layout_toStartOf="@+id/btn_exc"
+                android:hint="请输入需要执行的sh命令"
+                android:maxLines="1" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_cmdresult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"/>
+    </LinearLayout>
+</LinearLayout>

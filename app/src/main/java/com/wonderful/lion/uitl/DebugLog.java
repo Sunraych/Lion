@@ -6,7 +6,7 @@ import android.util.Log;
  * Created by Sun Ruichuan on 2015/8/31.
  */
 public class DebugLog {
-    public static boolean DEBUG = false;
+    public static boolean DEBUG = true;
     private static String name = "Debug";
 
     public static void e(String msg) {

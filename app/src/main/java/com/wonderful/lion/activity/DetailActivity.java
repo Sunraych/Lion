@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -28,6 +29,7 @@ import com.wonderful.lion.service.GetAppLaunchTime;
 import com.wonderful.lion.uitl.ConfigUtil;
 import com.wonderful.lion.uitl.DebugLog;
 import com.wonderful.lion.uitl.LogFile;
+import com.wonderful.lion.uitl.ShellUtil;
 import com.wonderful.lion.uitl.Util;
 
 import java.util.ArrayList;
@@ -73,11 +75,14 @@ public class DetailActivity extends Activity implements OnClickListener {
 
         ;
     };
-    private TextView cpuText, ramText, grafficText, batteryText;
+    public ShellUtil shellUtil;
+    private TextView cpuText, ramText, grafficText, batteryText, debugText;
     private CheckBox logCheck, flowCheck;
     private Button controlBtn;
     private String appname;
     private String packagename;
+    private String uid;
+    private String appuid;
     private Intent intent;
     private ConfigUtil configutil;
     private Util util = Util.getUtil();
@@ -104,14 +109,39 @@ public class DetailActivity extends Activity implements OnClickListener {
         appname = data.getStringExtra("appname");
         packagename = data.getStringExtra("packagename");
         mainActivity = data.getStringExtra("mainactivity");
+        uid = data.getStringExtra("uid");
+        //将int型uid转化为识别uid
+        appuid = "u0a" + uid.substring(uid.length() - 3, uid.length());
+
         getAppLaunchTime = new GetAppLaunchTime();
         initTitle();
         initView();
+
+        String command[] = {"dumpsys", "batterystats", "|", "grep", "Uid " + appuid};
+        String command_test[] = {"dumpsys", "batterystats"};
+        ShellUtil.CommandResult cmdresult = ShellUtil.execCommand(command_test, false);
+
+        if (cmdresult.result != -1 && !TextUtils.isEmpty(cmdresult.successMsg)) {
+            DebugLog.e(cmdresult.successMsg);
+            debugText.setText(cmdresult.successMsg);
+        } else {
+            DebugLog.e(cmdresult.errorMsg);
+            debugText.setText(cmdresult.errorMsg);
+        }
     }
 
     private void initView() {
 
         configutil = new ConfigUtil(this);
+
+        //调试框
+        debugText = (TextView) findViewById(R.id.tv_debug);
+
+        if (DebugLog.DEBUG) {
+            debugText.setVisibility(View.VISIBLE);
+        } else {
+            debugText.setVisibility(View.GONE);
+        }
 
         controlBtn = (Button) findViewById(R.id.control_btn);
         controlBtn.setOnClickListener(this);
