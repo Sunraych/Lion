@@ -58,8 +58,13 @@ public class ExcShellActivity extends Activity implements View.OnClickListener {
 
     private void excShell(){
         String cmd = editText.getText().toString();
-        String[] cmds = cmd.split(" ");
+//        String[] cmds = cmd.split(" ");
+
+        String[] cmds = {cmd};
+
         ShellUtil.CommandResult cmdresult = ShellUtil.execCommand(cmds,false);
+
+        textViewResult.setText("");
 
         if (cmdresult.result != -1 && !TextUtils.isEmpty(cmdresult.successMsg)) {
             textViewResult.setText(cmdresult.successMsg);
